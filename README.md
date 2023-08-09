@@ -17,18 +17,18 @@
 - has_many :orders
 
 
-## itemテーブル
-| column             | type      | option                         |
-| ------------------ | ----------| -------------------------------|
-| name               | string    | null: false                    |
-| description        | string    | null: false                    |
-| category           | string    | null: false                    |
-| item_status        | string    | null: false                    |
-| fee_status         | string    | null: false                    |
-| prefecture         | string    | null: false                    |
-| delivery_schedule  | string    | null: false                    |
-| price              | date      | null: false                    |
-| user               | references| null: false, foreign_key: true |
+## itemsテーブル
+| column              | type      | option                         |
+| ------------------- | ----------| -------------------------------|
+| name                | string    | null: false                    |
+| description         | text      | null: false                    |
+| category_id         | integer   | null: false                    |
+| item_status_id      | integer   | null: false                    |
+| fee_status_id       | integer   | null: false                    |
+| prefecture_id       | integer   | null: false                    |
+| delivery_schedule_id| integer   | null: false                    |
+| price               | integer   | null: false                    |
+| user                | references| null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
@@ -52,10 +52,10 @@
 | ------------------ | ----------| -------------------------------|
 | order              | references| null: false, foreign_key: true |
 | post_code          | string    | null: false                    |
-| prefecture         | integer   | null: false                    |
-| municipalities     | string    | null: false                    |
+| prefecture_id      | integer   | null: false                    |
+| city               | string    | null: false                    |
 | house_number       | string    | null: false                    |
-| building           | string    | null: false                    |
+| building           | string    |                                |
 | phone_number       | string    | null: false                    |
 
 ### Association

@@ -56,7 +56,7 @@ RSpec.describe Item, type: :model do
       it '配送料の負担の情報が「---」だと出品できない' do
         @item.fee_status_id = 0
         @item.valid?
-        expect(@item.errors.full_messages).to include("Fee status must be other than 0")
+        expect(@item.errors.full_messages).to include('Fee status must be other than 0')
       end
       it '配送料の負担の情報が空欄だと出品できない' do
         @item.fee_status_id = nil
@@ -76,7 +76,7 @@ RSpec.describe Item, type: :model do
       it '発送までの日数の情報が「---」だと出品できない' do
         @item.delivery_schedule_id = 0
         @item.valid?
-        expect(@item.errors.full_messages).to include("Delivery schedule must be other than 0")
+        expect(@item.errors.full_messages).to include('Delivery schedule must be other than 0')
       end
       it '発送までの日数の情報が空欄だと出品できない' do
         @item.delivery_schedule_id = nil

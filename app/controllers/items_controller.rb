@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
+    @items = Item.includes(:user).order('created_at DESC')
   end
 
   # newアクションを定義する
@@ -26,6 +27,6 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:image, :name, :description, :category_id, :item_status_id, :fee_status_id, :prefecture_id,
-                                 :delivery_schedule_id, :price).merge(user_id: current_user.id)
+                                 :delivery_schedule_id, :price, :image).merge(user_id: current_user.id)
   end
 end

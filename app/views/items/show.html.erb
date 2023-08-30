@@ -4,11 +4,11 @@
 <div class="item-show">
   <div class="item-box">
     <h2 class="name">
-      <%= @item.item_name %>
+      <%= @item.name %>
     </h2>
     <div class="item-img-content">
       <%= image_tag @item.image.variant(resize: '500x500'), class:"item-box-img" %>
-      <% if @item.order != nil %>
+      <% if @item.order !=nil %>
       <div class="sold-out">
         <span>Sold Out!!</span>
       </div>

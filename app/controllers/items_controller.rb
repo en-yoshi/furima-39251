@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   # 未ログイン時にログインページへ遷移
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_item, only: [:edit, :show]
 
   def index
     @items = Item.includes(:user).order('created_at DESC')
@@ -23,10 +24,17 @@ class ItemsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
   private
 
   def item_params
     params.require(:item).permit(:image, :name, :description, :category_id, :item_status_id, :fee_status_id, :prefecture_id,
                                  :delivery_schedule_id, :price, :image).merge(user_id: current_user.id)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 end

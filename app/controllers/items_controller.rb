@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   # 未ログイン時にログインページへ遷移
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_item, only: [:edit, :show]
+  before_action :set_item, only: [:edit, :show, :update]
 
   def index
     @items = Item.includes(:user).order('created_at DESC')
@@ -24,7 +24,19 @@ class ItemsController < ApplicationController
   def show
   end
 
+  # URL直接確認
   def edit
+    return unless @item.user_id != current_user.id
+
+    redirect_to root_path
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to item_path
+    else
+      render :edit
+    end
   end
 
   private

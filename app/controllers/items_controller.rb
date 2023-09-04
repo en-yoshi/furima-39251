@@ -33,14 +33,14 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to item_path
+      redirect_to item_path(@item)
     else
       render :edit
     end
   end
 
   def destroy
-    @item.destroy
+    @item.destroy if @item.user_id == current_user.id
     redirect_to root_path
   end
 

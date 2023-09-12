@@ -21,12 +21,9 @@ class ItemsController < ApplicationController
     end
   end
 
-  def show
-  end
-
   # URL直接確認
   def edit
-    return unless @item.user_id != current_user.id
+    return unless @item.user_id != current_user.id || @item.order.present?
 
     redirect_to root_path
   end
@@ -37,6 +34,9 @@ class ItemsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def show
   end
 
   def destroy

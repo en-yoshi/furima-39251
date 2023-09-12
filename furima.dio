@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="Hh_ryzmLKb8ZI3C23cKH" name="ページ1">
-        <mxGraphModel dx="483" dy="176" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="481" dy="145" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -427,7 +427,7 @@
                         <mxPoint x="1023.5999999999999" y="527" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="206" value="deliveriesテーブル" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;shadow=0;" parent="1" vertex="1">
+                <mxCell id="206" value="paymentsテーブル" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;shadow=0;" parent="1" vertex="1">
                     <mxGeometry x="650" y="480" width="399" height="330" as="geometry"/>
                 </mxCell>
                 <mxCell id="207" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="206" vertex="1">

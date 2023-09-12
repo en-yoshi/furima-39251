@@ -52,5 +52,5 @@ class Prefecture < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :items
-  has_many :deliveries
+  has_many :peyments # 今まで問題はなかったが間違えに気付いた為、メンターさんに相談して今回はReadme,ER図側を修正
 end

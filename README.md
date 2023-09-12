@@ -44,10 +44,10 @@
 ### Association
 - belongs_to :item
 - belongs_to :user
-- has_one :delivery
+- has_one :payment
 
 
-## deliveriesテーブル
+## paymentsテーブル
 | column             | type      | option                         |
 | ------------------ | ----------| -------------------------------|
 | order              | references| null: false, foreign_key: true |

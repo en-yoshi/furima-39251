@@ -47,7 +47,7 @@
 - has_one :payment
 
 
-## deliveriesテーブル
+## paymentsテーブル
 | column             | type      | option                         |
 | ------------------ | ----------| -------------------------------|
 | order              | references| null: false, foreign_key: true |

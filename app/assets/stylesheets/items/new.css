@@ -96,6 +96,13 @@
   padding: 2vh 0;
 }
 
+/* プレビューの設定 */
+.preview-image {
+  height: 250px;
+  width: 250px;
+  object-fit: contain;
+}
+
 .items-text {
   width: 100%;
   padding: 16px 16px 8px;

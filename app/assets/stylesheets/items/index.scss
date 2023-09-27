@@ -250,6 +250,10 @@ a {
   background-color: #FFF;
 }
 
+.item-lists img:hover {
+  transform: scale(1.1, 1.1); /* ホバー時に1.1倍に拡大 */
+  transition: transform 0.3s ease; /* アニメーションを追加して滑らかに変化するようにする */
+}
 
 .item-img-content {
   position: relative;

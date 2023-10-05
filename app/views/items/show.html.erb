@@ -23,16 +23,18 @@
       </span>
     </div>
 
+   <%# <div class ="item-btn"> %>
   <% if @item.order == nil && user_signed_in? %>
       <% if user_signed_in? && current_user.id == @item.user_id %>
-      <%= link_to "商品の編集", edit_item_path(@item), method: :get, class: "item-red-btn" %>
+      <%= link_to "商品の編集", edit_item_path(@item), method: :get, class: "item-red-btn item-btn" %>
       <p class="or-text">or</p>
-      <%= link_to "削除", item_path(@item), method: :delete, class: "item-destroy", data: { confirm: "本当に削除しますか？" } %>
+      <%= link_to "削除", item_path(@item), method: :delete, class: "item-destroy item-btn", data: { confirm: "本当に削除しますか？" } %>
       <% elsif user_signed_in? && current_user.id != @item.user_id %>
-      <%= link_to "購入画面に進む", item_orders_path(@item), class:"item-red-btn"%>
+      <%= link_to "購入画面に進む", item_orders_path(@item), class:"item-red-btn item-btn"%>
     <% end %>
   <% end %>
-  
+  <%# </div> %>
+
     <div class="item-explain-box">
       <span><%= @item.description %></span>
     </div>
